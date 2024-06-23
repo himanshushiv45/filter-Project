@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="./css/Filter.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+
+    <div class="container_fluid header">
+      <div class="container header_container">
+        <div class="logo">
+          <h1><span>F</span>ilter</h1>
+        </div>
+
+        <div class="filter_btn">
+          <button type="button" onclick="openFilter()">Open Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Section -->
+
+    <div class="filter" id="filter">
+      <div class="filter_section">
+        <h2>Filters</h2>
+        <h3>Search Product</h3>
+        <div class="user_inp">
+          <input
+            type="text"
+            placeholder="Product name"
+            onkeyup="setFilter('product_name',this.value), filterData()"
+          />
+        </div>
+        <h3>Select Your Category</h3>
+        <div class="user_inp">
+          <select
+            name=""
+            id="select_category"
+            onchange="setFilter('category',this.value),filterData()"
+          >
+            <option value="">Select category</option>
+            <option value="T-shirt">T-shirt</option>
+            <option value="Formal shirt">Formal shirt</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Shorts">Shorts</option>
+          </select>
+        </div>
+        <h3>Enter Min and Max Price</h3>
+        <div class="user_inp">
+          <div class="min_max">
+            <p>Min</p>
+            <input
+              type="number"
+              name=""
+              onkeyup="setFilter('minPrice',this.value),filterData()"
+            />
+          </div>
+          <div class="min_max">
+            <p>Max</p>
+            <input
+              type="number"
+              name=""
+              onkeyup="setFilter('maxPrice',this.value),filterData()"
+            />
+          </div>
+        </div>
+
+        <div class="user_inp">
+          <button onclick="filterData()">Filter</button>
+        </div>
+        <div class="user_inp">
+          <button onclick="openFilter()">Clear Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product section -->
+
+    <div class="container_fluid main">
+      <div class="container main_container" id="card_product">
+        <!-- <div class="card_item">
+          <div class="img_container">
+            <img
+              src="https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/t/q/i/m-db1024-37-3bros-original-imagz8zjz7t7sqyb.jpeg?q=70"
+            />
+          </div>
+          <div class="product_info">
+            <h2>Men Solid Polo Neck Maroon T-Shirt</h2>
+            <p>₹299</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <div class="container_fluid footer">
+      <div class="footer_container">
+        <p>
+          Copyright 2023 | All rights reserved | Designed and manage by
+          <a href="https://www.manishasystems.org/" target="_blank">
+            Manisha Systems
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------ -->
+
+    <!-- <h2>Hello Devlopers</h2>
+
+     <input
+      type="text"
+      id="inp"
+      onkeyup="readValue(this.value)"
+      placeholder="Enter Username"
+     />
+     <button type="button" id="btn" onclick="printValue()">Submit</button> -->
+
+    <!-- Dynamically js -->
+    <!-- <div id="ele">  </div> -->
+
+    <script src="./js/Filter.js"></script>
+  </body>
+</html>
+ 
